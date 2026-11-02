@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[Your Name] | Portfolio</title>
+  <meta name="description" content="Portfolio of [Your Name], a [Degree] student at [University].">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#top" class="logo">[Your Name]</a>
+      <nav class="nav" id="nav" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="header__actions">
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle dark mode">&#9680;</button>
+        <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero container">
+      <span class="badge">Open to internships and entry-level roles</span>
+      <h1>Hi, I'm [Your Name]. A curious student ready to build, learn and contribute.</h1>
+      <p class="lead">[Degree] student at [University], focused on [your interest]. I turn class projects into real work.</p>
+      <div class="btn-row">
+        <a href="#projects" class="btn btn--primary">See my projects</a>
+        <a href="resume.pdf" class="btn btn--ghost" download>Download resume</a>
+      </div>
+    </section>
+
+    <section id="about" class="section container reveal">
+      <h2>About me</h2>
+      <div>
+        <p class="big">[Two or three sentences: where you study, what you enjoy, what you want to do next.]</p>
+        <ul class="tags">
+          <li>[Skill one]</li><li>[Skill two]</li><li>[Skill three]</li><li>[Skill four]</li><li>[Skill five]</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="projects" class="section section--stack container reveal">
+      <h2>Projects</h2>
+      <div class="grid">
+        <a href="#" class="card">
+          <div class="thumb thumb--blue"><span class="shape shape--rect"></span></div>
+          <h3>[Project One]</h3>
+          <p>[One line on the problem you solved and the tools you used.]</p>
+        </a>
+        <a href="#" class="card">
+          <div class="thumb thumb--gray"><span class="shape shape--ring"></span></div>
+          <h3>[Project Two]</h3>
+          <p>[Course, team or hackathon project and your role.]</p>
+        </a>
+        <a href="#" class="card">
+          <div class="thumb thumb--blue"><span class="shape shape--bars"><i></i><i></i><i></i></span></div>
+          <h3>[Project Three]</h3>
+          <p>[Personal or freelance project and the result.]</p>
+        </a>
+      </div>
+    </section>
+
+    <section id="education" class="section container reveal">
+      <h2>Education and experience</h2>
+      <div class="timeline">
+        <article><time>[2023 — 2027]</time><h3>[Degree], [University]</h3><p>[CGPA or key coursework]</p></article>
+        <article><time>[Year]</time><h3>[Internship or volunteer role], [Organization]</h3><p>[What you did in one line]</p></article>
+        <article><time>[Year]</time><h3>[Certification or achievement]</h3><p>[Issuer]</p></article>
+      </div>
+    </section>
+
+    <section id="contact" class="container reveal">
+      <div class="cta">
+        <h2>Let's connect</h2>
+        <p>I'd love to hear about internships, projects or collaborations.</p>
+        <a href="mailto:hello@example.com" class="btn btn--light">[your@email.com]</a>
+        <div class="socials">
+          <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="#" target="_blank" rel="noopener">GitHub</a>
+          <a href="#" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    <p>&copy; <span id="year"></span> [Your Name]. All rights reserved.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
