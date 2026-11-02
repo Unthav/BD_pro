@@ -1,3 +1,6 @@
+// Enable animation styles only when JavaScript is running
+document.documentElement.classList.add('js');
+
 // Footer year
 document.getElementById('year').textContent = new Date().getFullYear();
 
@@ -28,7 +31,7 @@ document.getElementById('themeToggle').addEventListener('click', () => {
   try { localStorage.setItem('theme', next); } catch (e) {}
 });
 
-// Reveal sections on scroll
+// Smooth reveal on scroll (runs once per element, then stops observing)
 const revealObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -36,8 +39,20 @@ const revealObserver = new IntersectionObserver(entries => {
       revealObserver.unobserve(entry.target);
     }
   });
-}, { threshold: 0.12 });
-document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.reveal, .card').forEach(el => revealObserver.observe(el));
+
+// Header shadow after scrolling (throttled with requestAnimationFrame)
+const header = document.querySelector('.header');
+let ticking = false;
+window.addEventListener('scroll', () => {
+  if (ticking) return;
+  ticking = true;
+  requestAnimationFrame(() => {
+    header.classList.toggle('scrolled', window.scrollY > 8);
+    ticking = false;
+  });
+}, { passive: true });
 
 // Highlight active nav link
 const links = [...nav.querySelectorAll('a')];
